@@ -1,0 +1,91 @@
+.video-container {
+    margin-top: 55px; /* Space for header */
+    margin-left: 65px; /* Space for sidebar */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+    gap: 10px; /* Adjust the gap between items */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: rgb(249, 249, 249);
+}
+
+@media (max-width: 1095px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Still two columns for smaller screens */
+    }
+}
+
+.video-format {
+    aspect-ratio: 4 / 3.25; /* Maintains a 4:3 aspect ratio */
+    width: 100%; /* Ensures the div fills its grid cell */
+    height: auto; /* Adjust height automatically to aspect ratio */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.video-format:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Thumbnail styling */
+.thumbnail {
+    width: 100%;
+    border-radius: 20px;
+    transition: border-radius 0.3s; /* Smooth transition for the border radius */
+}
+
+/* On hovering a specific video format, set that specific thumbnail's border-radius to 0 */
+.video-format:hover .thumbnail {
+    border-radius: 6px;
+}
+
+.video-desc {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Align the channel picture and video details side by side */
+    gap: 10px; /* Space between the picture and the text */
+    padding-top: 8px;
+}
+
+.channel-picture {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column; /* Stack title and info vertically */
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column; /* Stack author and stats vertically */
+    font-size: 13px;
+    color: #545454; /* Grey color for info text */
+}
+
+.video-author {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.video-stats {
+    margin: 0;
+    color: #7e7e7e; /* Lighter grey for stats */
+}
