@@ -1,6 +1,4 @@
 YouTube Clone - README
-
-YouTube Clone - README
 Project Overview
 This project is a YouTube Clone that replicates the core layout and features of the popular video streaming platform. It is built using HTML and CSS and includes the following:
 •	Responsive Video Grid: A grid that adjusts based on screen size.
