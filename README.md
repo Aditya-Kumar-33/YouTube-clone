@@ -5,6 +5,7 @@ This project is a YouTube Clone that replicates the core layout and features of 
 •	Sidebar Navigation: Quick access to various sections.
 •	Header: Includes logo, search bar, and user profile icons.
 This clone is a front-end simulation and does not include back-end video functionality. It serves as a foundation for understanding responsive design, layout structure, and CSS styling.
+![image](https://github.com/user-attachments/assets/ee65f0c8-f81b-462a-9fd7-3ac6a46bac83)
 ________________________________________
 Features Breakdown
 1. Header Navigation
@@ -33,6 +34,7 @@ Key CSS Properties and Layout Techniques
 •	Hover Effects: Enhances interactive elements.
 •	Responsive Design: Media queries adjust layout for different screen sizes.
 •	Fixed Positioning: Ensures the header and sidebar remain visible while scrolling.
+![image](https://github.com/user-attachments/assets/c7c34dbf-79f6-434d-a217-71035168c31d)
 ________________________________________
 File Structure
 •	YouTubeclone.html: Main HTML file containing the layout and linking CSS files.
@@ -50,6 +52,6 @@ Future Improvements
 ________________________________________
 Conclusion
 This project demonstrates the use of HTML and CSS to create a responsive and functional user interface. It serves as a foundation for building responsive web applications, focusing on layout structure and interactivity.
-![image](https://github.com/user-attachments/assets/ee65f0c8-f81b-462a-9fd7-3ac6a46bac83)
-![image](https://github.com/user-attachments/assets/c7c34dbf-79f6-434d-a217-71035168c31d)
+
+
 
