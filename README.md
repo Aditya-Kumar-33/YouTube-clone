@@ -50,4 +50,6 @@ Future Improvements
 ________________________________________
 Conclusion
 This project demonstrates the use of HTML and CSS to create a responsive and functional user interface. It serves as a foundation for building responsive web applications, focusing on layout structure and interactivity.
+![image](https://github.com/user-attachments/assets/ee65f0c8-f81b-462a-9fd7-3ac6a46bac83)
+![image](https://github.com/user-attachments/assets/c7c34dbf-79f6-434d-a217-71035168c31d)
 
