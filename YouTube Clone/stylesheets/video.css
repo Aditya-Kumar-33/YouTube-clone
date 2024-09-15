@@ -30,6 +30,23 @@
     cursor: pointer;
     padding: 4px;
     margin-bottom: 20px;
+    position: relative;
+}
+.time-stamp {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+
+    right: 3%;
+    bottom: 34%; /* Adjust this to be relative to the video size */
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+
+    font-size: clamp(10px, 2vw, 14px);
 }
 
 .video-format:hover {
@@ -39,7 +56,7 @@
 /* Thumbnail styling */
 .thumbnail {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 14px;
     transition: border-radius 0.3s; /* Smooth transition for the border radius */
 }
 
