@@ -1,181 +1,108 @@
-<!DOCTYPE html>
-<head>
-    <title>YouTube Clone</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="stylesheets/general.css">
-    <link rel="stylesheet" href="stylesheets/header.css">
-    <link rel="stylesheet" href="stylesheets/video.css">
-    <link rel="stylesheet" href="stylesheets/sidebar.css">
-    
-</head>
-<body>
-    <header class="header">
+.video-container {
+    margin-top: 55px; /* Space for header */
+    margin-left: 65px; /* Space for sidebar */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns by default */
+    gap: 10px; /* Adjust the gap between items */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: rgb(249, 249, 249);
+}
 
-        <div class="yt-logo">
-            <div class="hamburger-menu-container">
-                <img class="hamburger-menu" src="icons/hamburger-menu.svg">
-            </div>
-            <img class="youtube-logo" src="icons/youtube-logo.svg">
-        </div>
+@media (max-width: 1095px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
 
-        <div class="search">
-            <input class="search-bar" type="text" placeholder="Search">
-            <div class="search-container">
-              <button class="search-button">
-                <img class="search-img" src="icons/search.svg" alt="Search Icon">
-                <div class="tooltip">Search</div>
-              </button>
-            </div>
-            <button class="voice-search">
-              <img class="voice-search-icon" src="icons/voice-search-icon.svg" alt="Voice Search Icon">
-              <div class="tooltip">Search with your voice</div>
-            </button>
-          </div>
-          
-          <div class="head-menu">
-            <div class="upload-icon-container">
-              <img class="upload-icon" src="icons/upload.svg" alt="Upload Icon">
-              <div class="tooltip">Create</div>
-            </div>
-            
-            <div class="notifications-icon-container">
-              <img class="notifications-icon" src="icons/notifications.svg" alt="Notifications Icon">
-              <div class="notifications-count">1</div>
-              <div class="tooltip">Notifications</div>
-            </div>
-          
-            <img class="profile-picture" src="icons/unnamed (1).jpg" alt="Profile Picture">
-          </div>
-          
-    </header>
-    
-    <nav class="sidebar">
-        <div class="sidebar-icon">
-            <img class="home-img" src="icons/home.svg">
-            <div class="sidebar-icon-text">Home</div>
-        </div>
-        <div class="sidebar-icon">
-            <img class="shorts-img" src="icons/shorts.svg">
-            <div class="sidebar-icon-text">Shorts</div>
-        </div>
-        <div class="sidebar-icon">
-            <img class="subscription-img" src="icons/subscriptions.svg">
-            <div class="sidebar-icon-text">Subscriptions</div>
-        </div>
-        <div class="sidebar-icon">
-            <img class="music-img" src="icons/youtube-music.svg">
-            <div class="sidebar-icon-text">YouTube Music</div>
-        </div>
-        <div class="sidebar-icon">
-            <img class="you-img" src="icons/you.svg">
-            <div class="sidebar-icon-text">You</div>
-        </div>
-        <div class="sidebar-icon">
-            <img class="downloads-img" src="icons/download.svg">
-            <div class="sidebar-icon-text">Downloads</div>
-        </div>
-    </nav>
+@media (max-width: 600px) {
+    .video-container {
+        grid-template-columns: repeat(2, 1fr); /* Still two columns for smaller screens */
+    }
+}
 
+.video-format {
+    aspect-ratio: 4 / 3.25; /* Maintains a 4:3 aspect ratio */
+    width: 100%; /* Ensures the div fills its grid cell */
+    height: auto; /* Adjust height automatically to aspect ratio */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.time-stamp {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
 
-    <div class="video-container">
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720.webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/channels4_profile (4).jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        Kth Smallest Element in a BST - LeetCode 230 - Python (Recursive and Iterative!)
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">DEEPTI TALESRA</p>
-                        <p class="video-stats">960 views &#183; 8 days ago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720 (5).webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/channels4_profile.jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        Minimum Remove to Make Valid Parentheses | LeetCode Medium | Educative.io Day 107 | Stacks
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">KK Create</p>
-                        <p class="video-stats">732K views &#183; 12 days ago</p>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720 (1).webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/channels4_profile (2).jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        Why Generalists Beat Specialists | Jack of All Trades
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">New Money</p>
-                        <p class="video-stats">2.8M views &#183; 3 weeks ago</p>    
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720 (2).webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/unnamed.jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        When a show is good, but not great
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">Comickey</p>
-                        <p class="video-stats">11M views &#183; 2 years ago</p>                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720 (3).webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/channels4_profile (3).jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        So, you want to build apps & websites?
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">NeetCode</p>
-                        <p class="video-stats">672K views &#183; 3 weeks ago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="video-format">
-            <img class="thumbnail" src="thumbnails/hq720 (4).webp">
-            <div class="video-desc"> 
-                <img class="channel-picture" src="profile photos/channels4_profile (1).jpg">
-                <div class="video-details">
-                    <div class="video-title">
-                        I Solved 1583 Leetcode Questions Here's What I Learned
-                    </div>
-                    <div class="video-info">
-                        <p class="video-author">SuperSimpleDev</p>
-                        <p class="video-stats">2.6M views &#183; 1 month ago</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-</body>
-</html>
+    right: 3%;
+    bottom: 34%; /* Adjust this to be relative to the video size */
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 5px;
+
+    font-size: clamp(10px, 2vw, 14px);
+}
+
+.video-format:hover {
+    background-color: rgb(240, 240, 240);
+}
+
+/* Thumbnail styling */
+.thumbnail {
+    width: 100%;
+    border-radius: 14px;
+    transition: border-radius 0.3s; /* Smooth transition for the border radius */
+}
+
+/* On hovering a specific video format, set that specific thumbnail's border-radius to 0 */
+.video-format:hover .thumbnail {
+    border-radius: 6px;
+}
+
+.video-desc {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Align the channel picture and video details side by side */
+    gap: 10px; /* Space between the picture and the text */
+    padding-top: 8px;
+}
+
+.channel-picture {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.video-details {
+    display: flex;
+    flex-direction: column; /* Stack title and info vertically */
+}
+
+.video-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 4px;
+}
+
+.video-info {
+    display: flex;
+    flex-direction: column; /* Stack author and stats vertically */
+    font-size: 13px;
+    color: #545454; /* Grey color for info text */
+}
+
+.video-author {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.video-stats {
+    margin: 0;
+    color: #7e7e7e; /* Lighter grey for stats */
+}
